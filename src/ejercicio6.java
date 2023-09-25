@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ejercicio6 {
@@ -11,7 +12,9 @@ public class ejercicio6 {
         do {
             System.out.print("Introduce un número, si quieres salir del bucle, introduce un número negativo: ");
             num = read.nextInt();
-            numeros.add(num);
+            if (num >= 0) {
+                numeros.add(num);
+            }
         } while (num >= 0);
 
         do {
@@ -23,5 +26,7 @@ public class ejercicio6 {
                 System.out.println("El número no está en la lista");
             }
         } while (buscar >= 0);
+        Collections.sort(numeros);
+        System.out.println(numeros);
     }
 }
